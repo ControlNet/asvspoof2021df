@@ -1,0 +1,17 @@
+program: run_wandb.py
+method: random
+parameters:
+  dropout_rate:
+    distribution: uniform
+    max: 0.9
+    min: 0.3
+  mlp_neurons:
+    distribution: int_uniform
+    max: 6200
+    min: 64
+  layers:
+    distribution: int_uniform
+    max: 4
+    min: 1
+  activation_function:
+    values: ["LeakyReLU", "GELU"]

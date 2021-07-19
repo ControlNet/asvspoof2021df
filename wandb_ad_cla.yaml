@@ -1,0 +1,23 @@
+program: run_wandb_ad_cla.py
+method: random
+parameters:
+  cla_hidden_layers:
+    distribution: int_uniform
+    max: 4
+    min: 0
+  cla_hidden_neurons:
+    distribution: int_uniform
+    max: 2048
+    min: 32
+  cla_dropout_rate:
+    distribution: uniform
+    max: 0.8
+    min: 0
+  cla_activation:
+    values: ["LeakyReLU", "Mish", "ReLU", "GELU", "ELU"]
+  cla_attn:
+    values: [0, 1]
+  cla_basis:
+    values: ["gaussian", "linear", "quadratic", "inverse quadratic", "poisson one", "poisson two", "matern32", "matern52", "tanh"]
+  cla_norm:
+    values: [0, 1]

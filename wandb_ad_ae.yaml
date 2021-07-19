@@ -1,0 +1,21 @@
+program: run_wandb_ad_ae.py
+method: random
+parameters:
+  encoder_layers:
+    distribution: int_uniform
+    max: 4
+    min: 1
+  latent_neurons:
+    distribution: int_uniform
+    max: 2048
+    min: 32
+  dropout_rate:
+    distribution: uniform
+    max: 0.7
+    min: 0
+  activation_function:
+    values: ["LeakyReLU", "GELU"]
+  noise_sigma:
+    distribution: log_uniform
+    max: 0
+    min: -10
