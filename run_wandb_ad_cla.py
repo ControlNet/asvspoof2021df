@@ -1,16 +1,6 @@
-from data_io import ASVspoof2019TrillMean, ASVspoof2019TrillMeanDataModule, ASVspoof2019TrillMeanDataModule0, ASVspoof2019Trill
+from data_io import ASVspoof2019TrillMeanDataModule
 from my_model import AnomalyDetector
-from pytorch_lightning.callbacks import ModelCheckpoint
 from tensorneko import NekoTrainer
-from tqdm import tqdm
-from run_utils import *
-from metrics.eval_metrics import * 
-
-from torch.utils.data import DataLoader
-from tensorneko.util import summarize_dict_by
-
-import numpy as np
-import torch
 import wandb
 
 hyperparameter_defaults = dict(

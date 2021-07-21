@@ -1,14 +1,8 @@
 from my_model import Classifier
-from data_io import ASVspoof2019TrillMean, ASVspoof2019TrillMeanDataModule
+from data_io import ASVspoof2019TrillMeanDataModule
 from tensorneko import Trainer
-from tqdm import tqdm
 from run_utils import *
-from metrics.eval_metrics import * 
-
-from torch.utils.data import DataLoader
-from tensorneko.util import summarize_dict_by
-
-import numpy as np
+from metrics.eval_metrics import *
 import torch
 import wandb
 
